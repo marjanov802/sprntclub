@@ -1,0 +1,188 @@
+.main {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* ── Video Background ── */
+.videoWrapper {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+            rgba(8, 8, 8, 0.75) 0%,
+            rgba(8, 8, 8, 0.55) 50%,
+            rgba(255, 0, 85, 0.12) 100%);
+}
+
+/* ── Hero Content ── */
+.content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    animation: fadeUp 1s ease both;
+}
+
+.tagline {
+    font-family: var(--font-condensed);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--pink);
+    animation: fadeUp 1s ease 0.1s both;
+}
+
+.heading {
+    font-family: var(--font-display);
+    font-size: clamp(6rem, 18vw, 16rem);
+    line-height: 0.9;
+    letter-spacing: -0.01em;
+    animation: fadeUp 1s ease 0.2s both;
+}
+
+.headingWhite {
+    color: var(--white);
+}
+
+.headingPink {
+    color: var(--pink);
+    text-shadow: 0 0 60px var(--pink-glow), 0 0 120px var(--pink-glow);
+}
+
+.sub {
+    font-family: var(--font-condensed);
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--white-dim);
+    animation: fadeUp 1s ease 0.35s both;
+}
+
+/* ── CTA Buttons ── */
+.actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    animation: fadeUp 1s ease 0.5s both;
+}
+
+.btnPrimary {
+    font-family: var(--font-condensed);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 0.9rem 2.5rem;
+    background: var(--pink);
+    color: var(--white);
+    border: 2px solid var(--pink);
+    cursor: pointer;
+    transition: background 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btnPrimary:hover {
+    background: transparent;
+    color: var(--pink);
+    box-shadow: 0 0 30px var(--pink-glow);
+}
+
+.btnSecondary {
+    font-family: var(--font-condensed);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 0.9rem 2.5rem;
+    background: transparent;
+    color: var(--white);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: border-color 0.25s ease, color 0.25s ease;
+}
+
+.btnSecondary:hover {
+    border-color: var(--white);
+    color: var(--white);
+}
+
+/* ── Scrolling Strip ── */
+.strip {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background: var(--pink);
+    padding: 0.6rem 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.strip span {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    color: var(--black);
+    animation: marquee 20s linear infinite;
+}
+
+/* ── Animations ── */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .actions {
+        flex-direction: column;
+        width: 100%;
+        padding: 0 2rem;
+    }
+
+    .btnPrimary,
+    .btnSecondary {
+        text-align: center;
+    }
+}
