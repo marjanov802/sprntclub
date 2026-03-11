@@ -1,0 +1,279 @@
+.main {
+    background: var(--black);
+    color: var(--white);
+    min-height: 100vh;
+}
+
+.pink {
+    color: var(--pink);
+}
+
+/* ── Hero Banner ── */
+.hero {
+    position: relative;
+    height: 50vh;
+    min-height: 320px;
+    display: flex;
+    align-items: flex-end;
+    padding: 4rem 6rem;
+    background: var(--black-soft);
+    overflow: hidden;
+}
+
+.heroOverlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 0, 85, 0.15) 0%, rgba(8, 8, 8, 0.9) 60%);
+}
+
+/* Decorative lines */
+.hero::before {
+    content: 'SPRNTCLUB';
+    position: absolute;
+    top: 50%;
+    right: -2rem;
+    transform: translateY(-50%);
+    font-family: var(--font-display);
+    font-size: 14rem;
+    color: rgba(255, 255, 255, 0.03);
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.heroContent {
+    position: relative;
+    z-index: 2;
+}
+
+.heroEyebrow {
+    font-family: var(--font-condensed);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--pink);
+    margin-bottom: 0.75rem;
+}
+
+.heroTitle {
+    font-family: var(--font-display);
+    font-size: clamp(3.5rem, 8vw, 7rem);
+    line-height: 1;
+    color: var(--white);
+}
+
+/* ── Sections ── */
+.section {
+    padding: 6rem 6rem;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.twoCol,
+.twoColReverse {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.twoColReverse {
+    direction: rtl;
+}
+
+.twoColReverse>* {
+    direction: ltr;
+}
+
+/* ── Carousel Wrapper ── */
+.carouselWrapper {
+    aspect-ratio: 4 / 3;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ── Text Block ── */
+.textBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.eyebrow {
+    font-family: var(--font-condensed);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--pink);
+}
+
+.sectionTitle {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.05;
+    color: var(--white);
+}
+
+.body {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+/* ── Quote Banner ── */
+.quoteBanner {
+    background: var(--pink);
+    padding: 4rem 6rem;
+    text-align: center;
+}
+
+.quote {
+    font-family: var(--font-display);
+    font-size: clamp(1.4rem, 3vw, 2.4rem);
+    color: var(--black);
+    line-height: 1.2;
+    max-width: 900px;
+    margin: 0 auto 1rem;
+}
+
+.quoteAuthor {
+    font-family: var(--font-condensed);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+/* ── Stats ── */
+.statsSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    padding: 5rem 6rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.stat {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+}
+
+.statNumber {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 6vw, 5rem);
+    color: var(--pink);
+    line-height: 1;
+}
+
+.statLabel {
+    font-family: var(--font-condensed);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.statDivider {
+    width: 1px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* ── Gallery Strip ── */
+.galleryStrip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+}
+
+.galleryItem {
+    aspect-ratio: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ── CTA ── */
+.cta {
+    padding: 8rem 6rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.ctaTitle {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    color: var(--white);
+    line-height: 1;
+}
+
+.ctaBtn {
+    font-family: var(--font-condensed);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 1rem 3rem;
+    background: var(--pink);
+    color: var(--white);
+    border: 2px solid var(--pink);
+    transition: background 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.ctaBtn:hover {
+    background: transparent;
+    color: var(--pink);
+    box-shadow: 0 0 30px var(--pink-glow);
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+    .hero {
+        padding: 4rem 2rem;
+    }
+
+    .section {
+        padding: 4rem 2rem;
+    }
+
+    .twoCol,
+    .twoColReverse {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        direction: ltr;
+    }
+
+    .quoteBanner {
+        padding: 3rem 2rem;
+    }
+
+    .statsSection {
+        flex-wrap: wrap;
+        padding: 3rem 2rem;
+        gap: 2rem;
+    }
+
+    .statDivider {
+        display: none;
+    }
+
+    .galleryStrip {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cta {
+        padding: 5rem 2rem;
+    }
+}

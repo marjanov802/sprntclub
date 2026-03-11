@@ -1,0 +1,357 @@
+.main {
+    background: var(--black);
+    color: var(--white);
+    min-height: 100vh;
+}
+
+.pink {
+    color: var(--pink);
+}
+
+/* ── Hero ── */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 90vh;
+    padding-top: 80px;
+    /* offset for fixed navbar */
+}
+
+.heroLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5rem 5rem 5rem 6rem;
+    gap: 1.5rem;
+}
+
+.eyebrow {
+    font-family: var(--font-condensed);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--pink);
+}
+
+.heroTitle {
+    font-family: var(--font-display);
+    font-size: clamp(3.5rem, 7vw, 7rem);
+    line-height: 1;
+    color: var(--white);
+}
+
+.heroSub {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.6);
+    max-width: 420px;
+}
+
+.heroImage {
+    position: relative;
+    min-height: 500px;
+}
+
+/* ── Session Card ── */
+.sessionSection {
+    padding: 6rem 6rem;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.sectionEyebrow {
+    font-family: var(--font-condensed);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--pink);
+    margin-bottom: 0.5rem;
+}
+
+.sectionTitle {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    color: var(--white);
+    margin-bottom: 3rem;
+}
+
+.sessionCard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: var(--black-soft);
+    overflow: hidden;
+}
+
+.sessionLeft {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sessionDetail {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.detailLabel {
+    font-family: var(--font-condensed);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.detailValue {
+    font-family: var(--font-condensed);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.detailValueBig {
+    font-family: var(--font-display);
+    font-size: 4rem;
+    color: var(--pink);
+    line-height: 1;
+    text-shadow: 0 0 40px var(--pink-glow);
+}
+
+.sessionRight {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.releaseLabel {
+    font-family: var(--font-condensed);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* ── Countdown ── */
+.countdown {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.countUnit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.countNum {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: var(--pink);
+    line-height: 1;
+    min-width: 2ch;
+    text-align: center;
+}
+
+.countLabel {
+    font-family: var(--font-condensed);
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.countSep {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    color: rgba(255, 255, 255, 0.2);
+    margin-bottom: 1rem;
+}
+
+.releaseDate {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.4);
+    max-width: 260px;
+    line-height: 1.6;
+}
+
+.bookBtn {
+    font-family: var(--font-condensed);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 1rem 2.5rem;
+    background: var(--pink);
+    color: var(--white);
+    border: 2px solid var(--pink);
+    cursor: pointer;
+    transition: background 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+    width: 100%;
+    max-width: 280px;
+}
+
+.bookBtn:hover {
+    background: transparent;
+    color: var(--pink);
+    box-shadow: 0 0 30px var(--pink-glow);
+}
+
+.bookBtnDisabled {
+    font-family: var(--font-condensed);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 1rem 2.5rem;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    cursor: not-allowed;
+    width: 100%;
+    max-width: 280px;
+}
+
+/* ── Info Strip ── */
+.infoStrip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    padding: 3rem 6rem;
+    background: var(--black-soft);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.infoItem {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+}
+
+.infoIcon {
+    font-size: 1.5rem;
+}
+
+.infoLabel {
+    font-family: var(--font-condensed);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.infoDivider {
+    width: 1px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* ── FAQ ── */
+.faqSection {
+    padding: 6rem 6rem;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.faqGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.faqCard {
+    background: var(--black-soft);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-left: 3px solid var(--pink);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    transition: border-color 0.2s ease;
+}
+
+.faqCard:hover {
+    border-color: var(--pink);
+    background: rgba(255, 0, 85, 0.04);
+}
+
+.faqQ {
+    font-family: var(--font-condensed);
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--white);
+}
+
+.faqA {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+    .hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .heroLeft {
+        padding: 6rem 2rem 3rem;
+    }
+
+    .heroImage {
+        min-height: 300px;
+    }
+
+    .sessionSection,
+    .faqSection {
+        padding: 4rem 2rem;
+    }
+
+    .sessionCard {
+        grid-template-columns: 1fr;
+    }
+
+    .sessionLeft {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .infoStrip {
+        flex-wrap: wrap;
+        padding: 3rem 2rem;
+        gap: 2rem;
+    }
+
+    .infoDivider {
+        display: none;
+    }
+
+    .faqGrid {
+        grid-template-columns: 1fr;
+    }
+}
