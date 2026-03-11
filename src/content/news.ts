@@ -3,6 +3,7 @@ export interface Article {
     title: string;
     date: string;
     category: 'Announcements' | 'Events' | 'Community' | 'Updates';
+    image?: string;
     excerpt: string;
     body: string;
 }
